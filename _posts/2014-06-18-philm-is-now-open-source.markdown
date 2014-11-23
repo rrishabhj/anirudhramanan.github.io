@@ -4,7 +4,7 @@ title: Philm is  now open source
 date: '2014-06-18 16:48:44'
 ---
 
-![](/content/images/2014/Jun/unnamed.png)
+![](/content/images/philm-logo.png)
 
 If you haven't seen Philm yet, it is a movie collection and information app that I created for Android. It uses the Trakt and TMDB APIs.
 

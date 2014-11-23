@@ -6,7 +6,7 @@ date: '2014-10-20 16:04:27'
 
 Tried the Android Lollipop SDK? You may have noticed that Palette's API has been updated. As before, Palette allows you to extract colors from images for use in your UI.
 
-![](/content/images/2014/10/style-color-colorstory-01_large_mdpi.png)
+![](/content/images/style-color-colorstory-01_large_mdpi.png)
 
 ## Generating a palette
 The first step is to generate a Palette instance from a `Bitmap`. We have four related ways to do this:
