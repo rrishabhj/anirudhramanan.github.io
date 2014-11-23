@@ -18,7 +18,7 @@ date: '2013-03-22 00:00:00'
 
 <p>CheckableLinearLayout (full class code is at the end of the post) is a class which can be used in replacement for LinearLayout, and provides support for the Checkable interface. There are many implementations of this class on the web, but most omit the functionality that triggers the background drawable to change state:</p>
 
-```language-clike
+```
 public void setChecked(boolean b) {
     // cut down version of method
     // ...
@@ -53,7 +53,7 @@ public int[] onCreateDrawableState(int extraSpace) {
 
 <p>By setting this to true, the ViewGroup will copy it&#8217;s children&#8217;s state (for drawing purposes). Below is an example of how to use it in your layouts, but you can also just call <a href="https://developer.android.com/reference/android/view/ViewGroup.html#setAddStatesFromChildren(boolean)">setAddStatesFromChildren(boolean)</a></p>
 
-```<
+```
 <?xml version="1.0" encoding="utf-8">
 <com.example.checkableviews.CheckableLinearLayout
   xmlns:android="http://schemas.android.com/apk/res/android"
@@ -70,7 +70,7 @@ public int[] onCreateDrawableState(int extraSpace) {
 
 <h3>Full Class Code</h3>
 
-```language-clike
+```
 package com.example.checkableviews;
 
 /*******************************************************************************

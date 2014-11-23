@@ -12,7 +12,7 @@ When doing so you need to know where to position the text when you draw, and to 
 
 In an app recently I needed to draw some text centered both vertically and horizontally on the Canvas. So I started off with the following code:
 
-```clike-
+```
 Paint mTextPaint = new Paint();
 mTextPaint.setTextAlign(Paint.Align.CENTER); // Center the text
 
@@ -32,7 +32,7 @@ I didn't expect this to work first-time and it didn't, producing the following:
 
 Next I tried to position the text, calculating the text's height/width and modifying the drawing X and Y values appropriately:
 
-```clike-
+```
 int mTextWidth, mTextHeight; // Our calculated text bounds
 Paint mTextPaint = new Paint();
 
@@ -66,7 +66,7 @@ It was at this point where I saw that Paint has another method for calculating t
 
 This method only calculates the width and not the height, so I next tried combining the two methods:
 
-```clike-
+```
 int mTextWidth, mTextHeight; // Our calculated text bounds
 Paint mTextPaint = new Paint();
 

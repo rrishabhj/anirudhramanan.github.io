@@ -42,7 +42,7 @@ In simple terms, it's a cylindrical representation of the RGB colour space which
 
 To calculate colourfulness I used a simple product of the saturation and value. To my eyes the most colourful values are when both of these values are high.
 
-```clike-language
+```
 public float[] getHsv() {
     float[] hsv = new float[3];
     Color.RGBToHSV(r, g, b, hsv);
@@ -84,7 +84,7 @@ Instead we can calculate the ratio based on the most populous colour within the 
 
 Using these values we can combine them into one final value. A simple mean works OK but it turns out that monochrome colours feature highly because they tend to be highly populous. To combat this we can weight the characteristic(s) we desire so that they feature with greater importance, in this case we boost colourfulness:
 
-```clike-language
+```
 static float weightedAverage(float... values) {
     assert values.length % 2 == 0;
     
@@ -120,7 +120,7 @@ This is simple, use the first colour from our sorted weighted palette.
 
 From my requirements above, this needs to be different from the primary accent chosen above, ideally with a sufficiently different hue. Again we will use the **HSV** value, finding the first colour which has a sufficiently different hue value.
 
-```clike-language
+```
 // Hue is calculate in degrees (0-360)
 private static final int SECONDARY_MIN_DIFF_HUE_PRIMARY = 120;
 
@@ -146,7 +146,7 @@ return mWeightedPalette[1];
 
 This is very similar to the secondary accent colour above, but instead of checking the hue we check the difference in contrast in both of it's preceding colours (primary & secondary).
 
-```clike-language
+```
 // Contrast values are in the range 0-255.
 private static final int TERTIARY_MIN_CONTRAST_PRIMARY = 20;
 private static final int TERTIARY_MIN_CONTRAST_SECONDARY = 90;
@@ -172,7 +172,7 @@ But wait, where has this `calculateContrast()` method come from? This one actual
 
 In the end I converted each RGB colour into the YIQ colour space, only caring about the **Y** (luma) value. You can then compare two colour's luma to get the difference in brightness and apply a threshold.
 
-```language-clike
+```
 /**
  * @return difference in luma. Possible values are 0 (no difference) to 
  *         255 (max difference).

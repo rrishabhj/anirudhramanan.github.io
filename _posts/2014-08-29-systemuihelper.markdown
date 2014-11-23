@@ -10,7 +10,7 @@ It allows you to provide a level specifying how the System UI's visibility shoul
 
 #### To use the helper:
 
-```clike-language
+```
 SystemUiHelper helper = new SystemUiHelper(
         activity,
         LEVEL_LEAN_BACK,   // Choose from one of the levels

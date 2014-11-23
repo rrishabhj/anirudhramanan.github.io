@@ -138,7 +138,7 @@ The height, width, background, etc are totally up to you, these are just good ex
 
 Then in your Activity or Fragment, you set the Toolbar to act as your action bar:
 
-``` java
+```
 @Override
 public void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
