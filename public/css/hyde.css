@@ -263,10 +263,6 @@ a.sidebar-nav-item:focus {
 .lead {
   font-size: 0.9rem;
 }
-
-.page, .post {
-  margin-bottom: 2.5em;
-}
   
 .icon:before {
   font-family: "foundation-icons";
@@ -331,4 +327,26 @@ a.sidebar-nav-item:focus {
     font-size: 2.6rem; }
 }
 
+.post-overlay-header {
+  border-radius: 4px;
+  min-height: 300px;
+  background-size: cover;
+  position: relative;
+  margin-bottom: .5rem;
+}
+
+.post-overlay-header-title {
+  background-color: rgba(0, 0, 0, 0.35);
+  position: absolute; bottom: 0;
+  padding: 1rem 1rem 0 1rem; }
+
+.post-overlay-header a {
+  color: #FFF;
+}
+.post-overlay-header a:hover, a:focus {
+  color: #CCC; }
+
+.post-overlay-header .post-date {
+  color: #DDDDDD;
+}
 

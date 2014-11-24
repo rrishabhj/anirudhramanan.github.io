@@ -2,9 +2,8 @@
 layout: post
 title: 'appcompat v21: material design for pre-Lollipop devices!'
 date: '2014-10-17 12:07:54'
+cover_image: '/content/images/2014/11/materialdesign-goals-swirlanddot_large_xhdpi.png'
 ---
-
-![appcompat v21](/content/images/2014/11/materialdesign-goals-swirlanddot_large_xhdpi.png)
 
 *This post will be posted on the official Android Developer’s blog soon. Consider this a draft to fill the gaps until then.*
 

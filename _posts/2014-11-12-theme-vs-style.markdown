@@ -2,9 +2,8 @@
 layout: post
 title: Theme vs Style
 date: '2014-11-12 16:28:02'
+cover_image: '/content/images/2014/11/theme-vs-style.png'
 ---
-
-![](/content/images/2014/11/theme-vs-style.png)
 
 Android 5.0 Lollipop brings with it new functionality which allows you to specify an override theme for a View (and any descendents). Let's have a look at how and why you would use it.
 
