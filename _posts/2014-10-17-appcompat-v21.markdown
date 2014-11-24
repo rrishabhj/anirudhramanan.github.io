@@ -2,9 +2,8 @@
 layout: post
 title: 'appcompat v21: material design for pre-Lollipop devices!'
 date: '2014-10-17 12:07:54'
+cover_image: '/content/images/2014/11/materialdesign-goals-swirlanddot_large_xhdpi.png'
 ---
-
-![appcompat v21](/content/images/materialdesign-goals-swirlanddot_large_xhdpi.png)
 
 *This post will be posted on the official Android Developer’s blog soon. Consider this a draft to fill the gaps until then.*
 
@@ -16,18 +15,18 @@ AppCompat (aka ActionBarCompat) started out as a backport of the Android 4.0 [Ac
 
 Android 5.0 introduces a new [Toolbar](https://developer.android.com/reference/android/widget/Toolbar.html) widget.  This is a generalization of the ActionBar pattern but gives you **much** more control and flexibility in using it.  Toolbar is a view in your hierarchy just like any other, making it easier to interleave with the rest of your views, animate, react to scroll events.
 
-![Toolbar](/content/images/2014/10/layout-structure-toolbars-toolbars-04_large_xhdpi.png)
+![Toolbar](/content/images/2014/11/layout-structure-toolbars-toolbars-04_large_xhdpi.png)
 
 ## Setup
 
 If you’re using Gradle then the first thing to do is to add appcompat as a dependency in your build.gradle:
 
-```
+{% highlight groovy %}
 dependencies {
     ...
-    compile "com.android.support:appcompat-v7:21.0.0"
+    compile "com.android.support:appcompat-v7:21.0.+"
 }
-```
+{% endhighlight %}
 
 ### New integration
 
@@ -52,7 +51,7 @@ For most apps, you now only need one theme declaration, in `values/`:
 
 **values/themes.xml**:
 
-```
+{% highlight xml %}
 <style name="Theme.MyTheme" parent="Theme.AppCompat.Light">
     <!-- Here we setting appcompat’s actionBarStyle -->
     <item name="actionBarStyle">@style/MyActionBarStyle</item>
@@ -63,7 +62,7 @@ For most apps, you now only need one theme declaration, in `values/`:
     
     <!-- The rest of your attributes -->
 </style>
-```
+{% endhighlight %}
 
 ## Theming
 
@@ -71,7 +70,7 @@ AppCompat has support for the new [color palette](http://developer.android.com/t
 
 **values/themes.xml:**
 
-```
+{% highlight xml %}
 <style name="Theme.MyTheme" parent="Theme.AppCompat.Light">
     <!-- colorPrimary is used for the default action bar background -->
     <item name="colorPrimary">@color/my_awesome_color</item>
@@ -86,7 +85,7 @@ AppCompat has support for the new [color palette](http://developer.android.com/t
     <!-- You can also set colorControlNormal, colorControlActivated
          colorControlHighlight & colorSwitchThumbNormal. -->
 </style>
-```
+{% endhighlight %}
 
 By setting these, AppCompat will automatically propagate the values to the framework attributes on API 21+. This automatically colours the status bar and recents task entry.
 
@@ -124,7 +123,7 @@ To use Toolbar as an action bar,  the first thing you need to do is disable the 
 
 Second, you need to create a Toolbar instance, usually via your layout XML:
 
-```
+{% highlight xml %}
 <android.support.v7.widget.Toolbar
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/my_awesome_toolbar"
@@ -132,13 +131,13 @@ Second, you need to create a Toolbar instance, usually via your layout XML:
     android:layout_width="match_parent"
     android:minHeight="?attr/actionBarSize"
     android:background="?attr/colorPrimary" />
-```
+{% endhighlight %}
 
 The height, width, background, etc are totally up to you, these are just good examples. As Toolbar is just a ViewGroup, you can style and position it however you want.
 
 Then in your Activity or Fragment, you set the Toolbar to act as your action bar:
 
-```
+{% highlight java %}
 @Override
 public void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
@@ -147,7 +146,7 @@ public void onCreate(Bundle savedInstanceState) {
     Toolbar toolbar = (Toolbar) findViewById(R.id.my_awesome_toolbar);
     setSupportActionBar(toolbar);
 }
-```
+{% endhighlight %}
 
 From that point on, all menu items will be displayed in your Toolbar, populated via the standard options menu callbacks.
 
@@ -157,7 +156,7 @@ Very similar to above, but in this mode you do **not** set the Toolbar to act as
 
 When used by itself, you need to populate the Toolbar with content/actions manually. For instance, if you want it to display actions, you need to inflate a menu into it:
 
-```
+{% highlight java %}
 @Override
 public void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
@@ -178,7 +177,7 @@ public void onCreate(Bundle savedInstanceState) {
     // Inflate a menu to be displayed in the toolbar
     toolbar.inflateMenu(R.menu.your_toolbar_menu);
 }
-```
+{% endhighlight %}
 
 There are a number of other things you can do with Toolbar. See the Toolbar [javadoc](https://developer.android.com/reference/android/support/v7/widget/Toolbar.html) for more information.
 
@@ -188,13 +187,13 @@ Styling of Toolbar is done differently to the standard action bar, and is set di
 
 Here's a basic style you should be using when you're using a Toolbar as your action bar:
 
-```
+{% highlight xml %}
 <android.support.v7.widget.Toolbar
     android:layout_height="wrap_content"
     android:layout_width="match_parent"
     android:minHeight="?attr/actionBarSize"
     app:theme="@style/ThemeOverlay.AppCompat.ActionBar" />
-```
+{% endhighlight %}
 
 The `app:theme` declaration will make sure that your text and items are using solid colors (i.e 100% opacity white).
 
@@ -202,14 +201,14 @@ The `app:theme` declaration will make sure that your text and items are using so
 
 A common question I was asked during development was how to achieve a Toolbar which looks like 'DarkActionBar' (dark content, light overflow menu). This is achieved by providing the `theme` and `popupTheme` attributes:
 
-```
+{% highlight xml %}
 <android.support.v7.widget.Toolbar
     android:layout_height="wrap_content"
     android:layout_width="match_parent"
     android:minHeight="@dimen/triple_height_toolbar"
     app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
     app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
-```
+{% endhighlight %}
 
 Obviously the background, height, etc can be anything you want, the above are just suggestions.
 
@@ -221,7 +220,7 @@ So here is how you style SearchView:
 
 **values/themes.xml:**
 
-```
+{% highlight xml %}
 <style name="Theme.MyTheme" parent="Theme.AppCompat">
     <item name="searchViewStyle">@style/MySearchViewStyle</item>
 </style>
@@ -246,12 +245,12 @@ So here is how you style SearchView:
     <!-- Layout for query suggestion rows -->
     <item name="suggestionRowLayout">...</item>
 </style>
-```
+{% endhighlight %}
 
 Obviously you do not need to set all (or any) of these, the defaults will work for the majority of apps.
 
 ## Toolbar is coming
-![](/content/images/2014/10/meme-5921157745213440-1.jpg)
+![](/content/images/meme-brace-toolbar.jpg)
 
 Hopefully this post will help you get up and running with AppCompat and let you create some awesome, material apps.  Let me know in the comments/[G+](https://plus.google.com/u/0/+ChrisBanes/posts/L4Y9TDndifL)/[Twitter](https://twitter.com/chrisbanes/status/523158184283078657) if you’re having trouble with AppCompat or any of the support libraries, or where we could provide more documentation.
 

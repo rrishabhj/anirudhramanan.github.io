@@ -34,7 +34,7 @@ This turned out to pretty easy actually. First I converted the colour's RGB valu
 In simple terms, it's a cylindrical representation of the RGB colour space which represents colour via three axis: **H**ue, **S**aturation and **V**alue (brightness).
 
 <caption>
-  <img src="/content/images/2014/Mar/HSV_color_solid_cylinder_alpha_lowgamma.png" />
+  <img src="/content/images/2014/3/HSV_color_solid_cylinder_alpha_lowgamma.png" />
   <figcaption>
       The HSV colour space. Taken from [Wikipedia](http://en.wikipedia.org/wiki/File:HSV_color_solid_cylinder_alpha_lowgamma.png)
   </figcaption>
