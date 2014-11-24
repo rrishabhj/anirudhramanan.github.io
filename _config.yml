@@ -9,18 +9,16 @@ relative_permalinks: true
 # Setup
 title:            Chris Banes
 tagline:          'A Jekyll theme'
-description:      'A brazen two-column <a href="http://jekyllrb.com" target="_blank">Jekyll</a> theme that pairs a prominent sidebar with uncomplicated content. Made by <a href="https://twitter.com/mdo" target="_blank">@mdo</a>.'
+description:      'I work as a DPE in the Android Developer Relations team. This is my personal blog and any views expressed here are mine, and not my employers.'
 url:              http://chris.banes.me
 baseurl:          /
+logo:             /content/images/me.jpg
 
 author:
   name:           'Chris Banes'
   url:            https://plus.google.com/+ChrisBanes
 
 paginate:         5
-
-# Custom vars
-version:          2.1.0
 
 github:
   repo:           https://github.com/chrisbanes/chrisbanes.github.io

@@ -4,7 +4,7 @@ title: Theme vs Style
 date: '2014-11-12 16:28:02'
 ---
 
-![](/content/images/theme-vs-style.png)
+![](/content/images/2014/11/theme-vs-style.png)
 
 Android 5.0 Lollipop brings with it new functionality which allows you to specify an override theme for a View (and any descendents). Let's have a look at how and why you would use it.
 
@@ -18,11 +18,11 @@ Without being able to supply a seperate theme, you would need to manually set th
 
 That is where the old `actionBarWidgetTheme` attribute came in, it allowed you to specify a theme to be used **only** for your action bar. Here's an excerpt from the platform DarkActionBar theme:
 
-```
+{% highlight xml %}
 <style name="Theme.Holo.Light.DarkActionBar">
     <item name="android:actionBarWidgetTheme">@android:style/Theme.Holo</item>
 </style>
-```
+{% endhighlight %}
 
 Thus making your action bar using the dark theme.
 

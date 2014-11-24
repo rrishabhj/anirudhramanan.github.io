@@ -10,7 +10,7 @@ It allows you to provide a level specifying how the System UI's visibility shoul
 
 #### To use the helper:
 
-```
+{% highlight java %}
 SystemUiHelper helper = new SystemUiHelper(
         activity,
         LEVEL_LEAN_BACK,   // Choose from one of the levels
@@ -24,7 +24,7 @@ helper.hide()
 
 // Delay the hide for 2 seconds
 helper.delayHide(2000);
-```
+{% endhighlight %}
 
 You can find the code at this gist:
 https://gist.github.com/chrisbanes/73de18faffca571f7292
