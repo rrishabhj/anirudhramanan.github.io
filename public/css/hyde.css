@@ -78,8 +78,7 @@ html {
 .sidebar-about h1 {
   color: #fff;
   margin-top: 0;
-  font-family: "Oswald", serif;
-  font-size: 3.25rem;
+  font-size: 2.5rem;
   font-weight: normal;
 }
 
@@ -275,7 +274,6 @@ a.sidebar-nav-item:focus {
 
 .navigation {
   display: inline-block;
-  float: left;
   position: relative;
   margin: 0;
   padding: 0;

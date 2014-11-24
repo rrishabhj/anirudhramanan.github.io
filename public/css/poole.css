@@ -76,14 +76,19 @@ a strong {
 /* `:focus` is linked to `:hover` for basic accessibility */
 a:hover,
 a:focus {
-  text-decoration: underline;
-}
+  color: #006699;
+  -o-transition: .5s;
+  -ms-transition: .5s;
+  -moz-transition: .5s;
+  -webkit-transition: .5s; }
 
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
+  font-family: "Oswald", serif;
   margin-bottom: .5rem;
-  font-weight: bold;
+  font-weight: normal;
   line-height: 1.25;
+  letter-spacing: -.03em;
   color: #313131;
   text-rendering: optimizeLegibility;
 }
@@ -148,11 +153,15 @@ abbr[title] {
 }
 
 /* Code */
-code,
 pre {
   font-family: Menlo, Monaco, "Courier New", monospace;
+  overflow: auto;
+  padding: 1em 2.5%;
+  
+ 
 }
 code {
+  font-family: Menlo, Monaco, "Courier New", monospace;
   padding: .25em .5em;
   font-size: 85%;
   color: #bf616a;
@@ -168,9 +177,10 @@ pre {
   line-height: 1.4;
   white-space: pre;
   white-space: pre-wrap;
-  word-break: break-all;
-  word-wrap: break-word;
-  background-color: #f9f9f9;
+  overflow: auto;
+  background-color: #EEE;
+  border: 1px solid #CCC;
+   border-radius: 3px;
 }
 pre code {
   padding: 0;
@@ -339,6 +349,13 @@ tbody tr:nth-child(odd) th {
 .post-title a {
   color: #303030;
 }
+.post-title a:hover, a:focus {
+  color: #006699;
+  -o-transition: .5s;
+  -ms-transition: .5s;
+  -moz-transition: .5s;
+  -webkit-transition: .5s; }
+
 .page-title,
 .post-title {
   margin-top: 0;
