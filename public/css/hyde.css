@@ -326,11 +326,17 @@ a.sidebar-nav-item:focus {
 
 .post-overlay-header {
   border-radius: 4px;
-  min-height: 300px;
+  min-height: 190px;
   background-size: cover;
   background-position: center;
   position: relative;
   margin-bottom: .5rem;
+}
+
+@media (min-width: 48em) {
+  .post-overlay-header {
+    min-height: 300px;
+  }
 }
 
 .post-overlay-header-title {
