@@ -85,7 +85,8 @@ a:focus {
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
   font-family: "Oswald", serif;
-  margin-bottom: .5rem;
+  margin-top: .8rem;
+  margin-bottom: .6rem;
   font-weight: normal;
   line-height: 1.25;
   letter-spacing: -.03em;
@@ -163,7 +164,7 @@ pre {
 code {
   font-family: Menlo, Monaco, "Courier New", monospace;
   padding: .25em .5em;
-  font-size: 85%;
+  font-size: 80%;
   color: #bf616a;
   background-color: #f9f9f9;
   border-radius: 3px;
@@ -176,7 +177,6 @@ pre {
   font-size: .8rem;
   line-height: 1.4;
   white-space: pre;
-  white-space: pre-wrap;
   overflow: auto;
   background-color: #EEE;
   border: 1px solid #CCC;

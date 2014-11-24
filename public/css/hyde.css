@@ -64,7 +64,18 @@ html {
     top: 0;
     left: 0;
     bottom: 0;
-    width: 18rem;
+    width: 30%;
+    text-align: left;
+  }
+}
+
+@media (min-width: 64em) {
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 20rem;
     text-align: left;
   }
 }
@@ -132,19 +143,15 @@ a.sidebar-nav-item:focus {
 
 @media (min-width: 48em) {
   .content {
-    max-width: 38rem;
-    margin-left: 20rem;
-    margin-right: 2rem;
+    margin-left: 30%;
   }
 }
 
 @media (min-width: 64em) {
   .content {
     margin-left: 22rem;
-    margin-right: 4rem;
   }
 }
-
 
 /*
  * Reverse layout
@@ -313,3 +320,15 @@ a.sidebar-nav-item:focus {
   border-radius: 50%;
   border: 3px solid #FFF;
   box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.3); }
+  
+.post-comments {
+  border-top: 1px solid #dddddd;
+  padding: 60px 0; }
+
+
+@media (min-width: 48em) {
+  .post-title {
+    font-size: 2.6rem; }
+}
+
+
