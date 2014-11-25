@@ -342,8 +342,10 @@ a.sidebar-nav-item:focus {
 
 .post-overlay-header-title {
   background-color: rgba(0, 0, 0, 0.35);
-  position: absolute; bottom: 0;
-  padding: 1rem 1rem 0 1rem; }
+  position: absolute;
+  bottom: 0;
+  padding: 1rem 1rem 0 1rem;
+  border-bottom-left-radius: 4px; }
 
 .post-overlay-header a {
   color: #FFF;
