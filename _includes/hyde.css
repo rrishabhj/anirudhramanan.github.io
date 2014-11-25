@@ -282,31 +282,32 @@ a.sidebar-nav-item:focus {
 .sidebar-social {
   margin-bottom: 1rem; }
   .sidebar-social a {
-    padding: 6px 8px 6px 9px; }
+      width: 2em;
+      height: 2em; }
     .sidebar-social a .label {
       display: none; }
     .sidebar-social a .icon {
       display: block;
       font-size: 1.3em; }
   
-.navigation__item {
+.social-item {
   display: inline-block;
   margin: 1px;
-  line-height: 1em; }  
+ }  
       
-.navigation__item a {
+.social-item a {
   display: block;
   position: relative;
-  border: 1px solid #FFF;
+  border: 1px solid #BBB;
   border-radius: 50%;
   font-weight: bold;
   letter-spacing: 1px;
   text-shadow: none;
-  color: #FFF;
-  opacity: .7;
+  color: #BBB;
   -webkit-font-smoothing: antialiased; }
   .navigation__item a:hover {
-    opacity: 1;
+    color: #FFF;
+    border-color: #FFF;
  }
 
 .logo {
@@ -354,3 +355,30 @@ a.sidebar-nav-item:focus {
   color: #DDDDDD;
 }
 
+.twitter a:hover {
+  color: #64B5F6;
+  border-color: #64B5F6; }
+  
+.gplus a:hover {
+  color: #E57373;
+  border-color: #E57373; }
+
+.github a:hover {
+  color: #90A4AE;
+  border-color: #90A4AE; }
+  
+.stackoverflow a:hover {
+  color: #FFD54F;
+  border-color: #FFD54F; }
+  
+.foursquare a:hover {
+  color: #7986CB;
+  border-color: #7986CB; }  
+  
+.linkedin a:hover {
+  color: #64B5F6;
+  border-color: #64B5F6; }    
+
+.mail a:hover {
+  color: #4DB6AC;
+  border-color: #4DB6AC; }  
