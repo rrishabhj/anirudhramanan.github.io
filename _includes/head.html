@@ -14,15 +14,17 @@
     {% endif %}
   </title>
   
+  <meta name="twitter:site" content="{{ site.twitter }}">
+  <meta property="og:type" content="article">
+  
   {% if page.cover_image %}
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image:src" content="{{ site.url }}{{ page.cover_image }}">
+  <meta name="og:image" content="{{ site.url }}{{ page.cover_image }}">
   {% else %}
   <meta name="twitter:card" content="summary">
   {% endif %}
-  <meta name="twitter:title" content="{{ page.title }} &middot; {{ site.title }}">
-  <meta name="twitter:description" content="{{ page.excerpt | strip_html }}">
-  <meta name="twitter:site" content="{{ site.twitter }}">
+  
   {% if page.title == "Home" %}
   <meta property="og:title" content="{{ site.title }}">
   <meta property="twitter:title" content="{{ site.title }}">
@@ -30,15 +32,18 @@
   <meta property="og:title" content="{{ page.title }}">
   <meta property="twitter:title" content="{{ page.title }}">
   {% endif %}
-  <meta property="og:type" content="article">
+
+  {% if page.excerpt %}
+  <meta name="twitter:description" content="{{ page.excerpt | strip_html }}">
   <meta property="og:description" content="{{ page.excerpt | strip_html }}">
+  {% else %}
+  <meta name="twitter:description" content="{{ site.description }}">
+  <meta property="og:description" content="{{ site.description }}">
+  {% endif %}
 
   <!-- CSS -->
-  <link rel="stylesheet" href="{{ site.baseurl }}public/css/poole.css">
-  <link rel="stylesheet" href="{{ site.baseurl }}public/css/syntax.css">
-  <link rel="stylesheet" href="{{ site.baseurl }}public/css/hyde.css">
+  <link rel="stylesheet" href="{{ site.baseurl }}public/css/site.css">
   <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:400,700|Oswald">
-  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css">
 
   <!-- Icons -->
   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ site.baseurl }}public/apple-touch-icon-144-precomposed.png">

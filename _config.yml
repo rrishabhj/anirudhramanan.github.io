@@ -8,7 +8,6 @@ relative_permalinks: true
 
 # Setup
 title:            Chris Banes
-tagline:          'A Jekyll theme'
 description:      'I work as a DPE in the Android Developer Relations team. This is my personal blog and any views expressed here are mine, and not my employers.'
 url:              http://chris.banes.me
 baseurl:          /
