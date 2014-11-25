@@ -5,10 +5,6 @@ date: '2014-10-17 12:07:54'
 cover_image: '/content/images/2014/11/materialdesign-goals-swirlanddot_large_xhdpi.png'
 ---
 
-*This post will be posted on the official Android Developer’s blog soon. Consider this a draft to fill the gaps until then.*
-
-* * *
-
 The Android 5.0 SDK was released today and among the many tasty updates, includes new UI widgets and theming abilities to create material design style apps.  To enable you to bring your updated designs to older platforms, we have also updated the support libraries including AppCompat. In this post I’ll outline what’s new in AppCompat and how you can use it in your app.
 
 AppCompat (aka ActionBarCompat) started out as a backport of the Android 4.0 [ActionBar](https://developer.android.com/reference/android/app/ActionBar.html) API for devices running on Gingerbread, providing a common API layer on top of the backported implementation and framework implementation.  The new v21 appcompat update provides the API and feature-set that is up to date with Android 5.0.
