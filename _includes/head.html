@@ -14,6 +14,8 @@
     {% endif %}
   </title>
   
+  
+  
   <meta name="twitter:site" content="{{ site.twitter }}">
   <meta property="og:type" content="article">
   
@@ -36,9 +38,11 @@
   {% if page.excerpt %}
   <meta name="twitter:description" content="{{ page.excerpt | strip_html }}">
   <meta property="og:description" content="{{ page.excerpt | strip_html }}">
+  <meta name="description" content="{{ page.excerpt | strip_html }}">
   {% else %}
   <meta name="twitter:description" content="{{ site.description }}">
   <meta property="og:description" content="{{ site.description }}">
+  <meta property="description" content="{{ site.description }}">
   {% endif %}
 
   <!-- CSS -->
