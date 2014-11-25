@@ -24,3 +24,8 @@ disqus_shortname: chrisbanes
 
 github:
   repo:           https://github.com/chrisbanes/chrisbanes.github.io
+
+gems:
+  - jekyll-sitemap
+
+twitter: '@chrisbanes'
