@@ -57,26 +57,26 @@ The only things these currently do differently to their parents is that they cha
 
 Let's get back to the new Lollipop functionality. As mentioned you can now specify a theme directly onto a View in your layout.  The most common use of this will (probably) be using Toolbar:
 
-```
+{% highlight xml %}
 <Toolbar  
     android:layout_height="?android:attr/actionBarSize"
     android:layout_width="match_parent"
     android:background="?android:attr/colorPrimaryDark"
     android:theme="@android:style/ThemeOverlay.Material.Dark.ActionBar" />
-```
+{% endhighlight %}
 
 Hopefully you can now see how it all comes together. We have now made the Toolbar have a dark theme, ensuring that it's content is light in color and has contrast againt the dark background.
 
 One thing to note is that `android:theme` in Lollipop propogates to all children declared in the layout:
 
-```
+{% highlight xml %}
 <LinearLayout
     android:theme="@android:style/ThemeOverlay.Material.Dark">
     
     <!-- Anything here will also have a dark theme -->
     
 </LinearLayout>
-```
+{% endhighlight %}
 
 Your children can set their own theme if needed.
 
@@ -91,18 +91,20 @@ The `colorEdgeEffect` attribute is a new theme attribute in Android 5.0, which i
 As this is a theme attribute you can not just set it directly on the view. Instead we need to use `android:theme` with a custom ThemeOverlay. Our custom overlay just sets `android:colorEdgeEffect` to be red. We then set this theme on to the view so that it takes effect.
 
 **res/values/themes.xml**
-```
+
+{% highlight xml %}
 <style name="RedThemeOverlay" parent="android:ThemeOverlay.Material">
     <item name="android:colorEdgeEffect">#FF0000</item>
 </style>
-```
+{% endhighlight %}
 
 **res/layout/fragment_list.xml**
-```
+
+{% highlight xml %}
 <ListView
     ...
     android:theme="RedThemeOverlay" />
-```
+{% endhighlight %}
 
 Just to note, colorEdgeEffect was just an example here, this technique can be used with **all** theme attributes.
 

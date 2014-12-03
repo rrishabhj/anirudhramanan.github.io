@@ -63,18 +63,16 @@ Remember that each colour has a count attached to it? We can use that to determi
 
 Say we have the following very simple palette:
 
-```
 |  Color   |  Count  |
-----------------------
+|----------|---------|
 |  White   |   200   |
 |  Purple  |   175   |
 |  Black   |   150   |
 |  Red     |   125   |
 |  Orange  |   100   |
 |  Blue    |    50   |
-----------------------
+|----------|---------|
 |  Total   |   800   |
-```
 
 We could calculate the colour's percentage as it’s ratio within the whole picture. In the example above there are 800 pixels so using purple as an example, the colour's percentage would `175 / 800 = ~0.22`. Unfortunately this generated values which are too small, a colour would only be reach 1.0 if it was the only colour in the picture.
 
