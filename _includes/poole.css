@@ -84,7 +84,7 @@ a:focus {
 
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Fjalla One", serif;
+  font-family: "Fjalla One", "Roboto Condensed", Roboto, sans-serif;
   margin-top: .8rem;
   margin-bottom: .6rem;
   font-weight: normal;
