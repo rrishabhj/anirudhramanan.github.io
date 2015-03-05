@@ -31,7 +31,7 @@
  */
 
 html {
-  font-family: "Fira Sans", Roboto, Helvetica, Arial, sans-serif;
+  font-family: "Karla", Roboto, Helvetica, Arial, sans-serif;
 }
 @media (min-width: 48em) {
   html {
@@ -291,7 +291,7 @@ a.sidebar-nav-item:focus {
       display: none; }
     .sidebar-social a .icon {
       display: block;
-      font-size: 1.3em; }
+      font-size: 1.34em; }
   
 .social-item {
   display: inline-block;
@@ -304,7 +304,6 @@ a.sidebar-nav-item:focus {
   border: 1px solid #BBB;
   border-radius: 50%;
   font-weight: bold;
-  letter-spacing: 1px;
   text-shadow: none;
   color: #BBB;
   -webkit-font-smoothing: antialiased; }
