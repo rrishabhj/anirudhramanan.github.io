@@ -8,13 +8,13 @@ permalink:        pretty
 # Setup
 title:            Anirudh Ramanan
 description:      'I work as a Software Developer at Flipkart. This is my personal blog and any views expressed here are solely mine.'
-url:              http://anirudhramanan.github.io
+url:              http://iamanirudh.com
 baseurl:          /
 logo:             /content/images/me.jpg
 
 author:
   name:           'Anirudh Ramanan'
-  url:            https://plus.google.com/+AnirudhRamanan
+  url:            https://plus.google.com/107972823913344955047
 
 paginate:         5
 
@@ -26,7 +26,7 @@ github:
 gems:
   - jekyll-sitemap
 
-twitter: '@anirudhramanan'
+twitter: '@i_anirudh23'
 
 kramdown:
   # Enable GitHub Flavored Markdown (fenced code blocks)
