@@ -6,27 +6,27 @@ highlighter:      pygments
 permalink:        pretty
 
 # Setup
-title:            Chris Banes
-description:      'I work as a DPE in the Android Developer Relations team. This is my personal blog and any views expressed here are mine, and not my employers.'
-url:              http://chris.banes.me
+title:            Anirudh Ramanan
+description:      'I work as a Software Developer at Flipkart. This is my personal blog and any views expressed here are solely mine.'
+url:              http://anirudhramanan.github.io
 baseurl:          /
 logo:             /content/images/me.jpg
 
 author:
-  name:           'Chris Banes'
-  url:            https://plus.google.com/+ChrisBanes
+  name:           'Anirudh Ramanan'
+  url:            https://plus.google.com/+AnirudhRamanan
 
 paginate:         5
 
-disqus_shortname: chrisbanes
+disqus_shortname: anirudh
 
 github:
-  repo:           https://github.com/chrisbanes/chrisbanes.github.io
+  repo:           https://github.com/anirudhramanan/anirudhramanan.github.io
 
 gems:
   - jekyll-sitemap
 
-twitter: '@chrisbanes'
+twitter: '@anirudhramanan'
 
 kramdown:
   # Enable GitHub Flavored Markdown (fenced code blocks)
