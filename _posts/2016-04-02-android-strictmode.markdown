@@ -10,7 +10,7 @@ It can be used to catch various types of errors/voilations which has been discus
 
 There are various reasons for this integration, including:
 
-* ####Disk IO on Main Thread
+* #### Disk IO on Main Thread
   Catch all accidental disk operations taking place on the main thread.
 
 * #### Network Access on Main Thread
