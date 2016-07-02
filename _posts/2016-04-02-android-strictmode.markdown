@@ -8,7 +8,7 @@ Not many of you may heard about Strict Mode in Android. Added in Api Level 9, it
 
 It can be used to catch various types of errors/voilations which has been discussed below:
 
-There are various reasons for this integration, including:
+The Strict mode can help you detect various voilations such as :
 
 * #### Disk IO on Main Thread
   Catch all accidental disk operations taking place on the main thread.
@@ -20,17 +20,19 @@ There are various reasons for this integration, including:
   Detect all kind of leaked objects such as sql, cursors and much more.
 
 
-So, StrictMode is most commonly used to catch accidental disk or network access on the application's main thread, where UI operations are received and animations take place. Keeping disk and network operations off the main thread makes for much smoother, more responsive applications. [Source](http://developer.android.com/reference/android/os/StrictMode.html)
+So, StrictMode is most commonly used to catch accidental disk or network access on the application's main thread, where UI operations are received and animations take place. Keeping disk and network operations off the main thread makes for much smoother, more responsive applications. 
+[Official Link to Strict Mode](http://developer.android.com/reference/android/os/StrictMode.html)
 
 
 ### How to enable Strict Mode?
 
-Enabling strict mode is just a piece of cake. Just few lines of code in your application class, and its over. Whenever there are some voilations, it will crash the application with the error log.
+Enabling strict mode is just a piece of cake. Just few lines of code in your application class, and its over.
 
 * NOTE : Strict Mode should only be used in DEBUG mode.
 
 {% highlight groovy %}
 public void onCreate() {
+
     if (DEVELOPER_MODE) {
         StrictMode.setThreadPolicy(new StrictMode.ThreadPolicy.Builder()
         .detectDiskReads()
@@ -51,5 +53,5 @@ public void onCreate() {
 {% endhighlight %}
 
 
-Easy Right? Enable strict mode in your Application class, and make sure your programmers, and you (obviously :P) write codes in such a way that it prevents [ANR dialogs](http://developer.android.com/training/articles/perf-anr.html) from being shown to users.
+Easy Right? Enable strict mode in your Application class, and make sure the developers, including you (obviously :P) write and validate codes so that it prevents [ANR dialogs](http://developer.android.com/training/articles/perf-anr.html) from being shown to users.
 

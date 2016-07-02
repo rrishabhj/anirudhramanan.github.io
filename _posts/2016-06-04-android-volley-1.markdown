@@ -132,7 +132,7 @@ public class LruBitmapCache extends LruCache<String, Bitmap>
 
 You can modify the LRUCache based upon your app requirements.
 
-###[Official Link](https://developer.android.com/training/volley/request.html)
+### [Official Link](https://developer.android.com/training/volley/request.html)
 
 This was all about Volley. So, you now know why volley is such a very powerful library for making network calls, and makes it so easy with few lines of code. 
 

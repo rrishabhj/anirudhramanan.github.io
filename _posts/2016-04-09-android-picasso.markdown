@@ -23,7 +23,8 @@ Start by creating an android project, with an ImageView in your layout file. Add
     Picasso.with(context).load("your_image_url").into(imageView);
 {% endhighlight %}
 
-####Caching Images
+#### Caching Images
+
 Many issues such as image caching in memory / disk are all handled by Picasso. You can also provide your own logic of caching images for your app.
 
 So, if you do not want your picasso request to be cached into memory, ````MemoryPolicy.NO_CACHE```` will do it for you.
@@ -35,7 +36,8 @@ So, if you do not want your picasso request to be cached into memory, ````Memory
         .into(imageView);
 {% endhighlight %}
 
-####Transforming Images
+#### Transforming Images
+
 Picasso also helps in transforming images to better fit into your layout.
 
 To reduce the size of a image, we can use ````resize(width,height)```` for the same.
@@ -47,7 +49,8 @@ To reduce the size of a image, we can use ````resize(width,height)```` for the s
         .into(imageView)
 {% endhighlight %}
 
-####Placeholder and Error Images
+#### Placeholder and Error Images
+
 Picasso provides an optional place holder image that will be displayed until your image is loaded, and error image is displayed when there is any error (network error etc) while loading the image.
 
 {% highlight groovy %}

@@ -25,6 +25,7 @@ github:
 
 gems:
   - jekyll-sitemap
+  - jemoji
 
 twitter: '@i_anirudh23'
 

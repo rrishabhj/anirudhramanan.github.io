@@ -42,16 +42,16 @@ new FileTask().execute("url_to_download");
 
 ### Methods
 
-* ####onPreExecute
+* #### onPreExecute
 This method gets called before the doInBackground method gets called. It is where you can display a progress bar stating the download has been started.
 
-* ####doInBackground
+* #### doInBackground
 Heavy or long performing operations should be called here. So whenever you call the execute method(with parameters) in the UI Thread, doInBackground method gets called internally with those parameters.
 
-* ####onProgressUpdate
+* #### onProgressUpdate
 This method is invoked by calling publishProgress anytime from doInBackground. Basically used to display the progress.
 
-* ####onPostExecute
+* #### onPostExecute
 This method gets invoked when the doInBackground finishes execution. Here, you will dismiss any kind of progress, or display any success/failure message in the UI Thread.
 
 This was a very basic information on how and when to use AsnycTask in Android Apps.

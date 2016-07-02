@@ -73,16 +73,16 @@ This is how we fetch the JSON Data from the server, this remains similar incase 
 
 ### Features ?
 
-* ####Handling Request
+* #### Handling Request
 There are 3 types of request which volley supports : 1. StringRequest 2. ImageRequest and 3. JsonRequest. These are mainly used request in common scenario and volley can be very useful if we have such use cases.
 
-* ####Cancelling Request
+* #### Cancelling Request
 Volley also provides the support to cancel all the requests that are in the queue. RequestQueue provides a method named `cancelAll()` which will be used for the same.
 
-* ####Setting Priority
+* #### Setting Priority
 You can easily set the priority of any request to HIGH , NORMAL and LOW depending upon the request.
 
-* ####Retry Policy
+* #### Retry Policy
 Volley provides a default retry policy using which the request will retry itself in case it fails. You can extend the DefaultRetryPolicy and can have your own implementation.
 
 This was a very basic explanation on why to use volley instead of HttpURLConnection for making network calls and how to use it. In the next part I will have a more deep discussion on volley library, and how to load images using volley.
