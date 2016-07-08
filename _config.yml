@@ -21,7 +21,7 @@ paginate:         5
 disqus_shortname: anirudh
 
 github:
-  repo:           https://github.com/anirudhramanan/anirudhramanan.github.io
+  repo:           https://github.com/anirudh23/anirudhramanan.github.io
 
 gems:
   - jekyll-sitemap
