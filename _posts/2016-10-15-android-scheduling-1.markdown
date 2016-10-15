@@ -8,16 +8,16 @@ Most of the apps uses schedulers to schedule task that are executed outside of t
 
 Lets go through all the API's and decide the best one for each use case.
 
-## [Job Scheduler](https://developer.android.com/reference/android/app/job/JobScheduler.html)
+## Job Scheduler 
 
-Added in <b>API Level 21</b>, this is used to schedule jobs in the application's own process. It helps scheduling jobs in most efficient way, taking into account the battery status, phone charging status, and also the network status i.e if the network is metered or unmetered.
+[JobScheduler](https://developer.android.com/reference/android/app/job/JobScheduler.html) was added in <b>API Level 21</b>, this is used to schedule jobs in the application's own process. It helps scheduling jobs in most efficient way, taking into account the battery status, phone charging status, and also the network status i.e if the network is metered or unmetered.
 
-#### Advantages of using Job Scheduler ?
+<h4>Advantages of using Job Scheduler ?</h4>
   1. Tasks that should be executed only when the device is in charging mode.
   2. Tasks that are executed periodically, e.g pushing analytical event daily.
   3. Tasks that should be executed only on WIFI.
 
-#### How to use Job Scheduler?
+<h4>How to use Job Scheduler?</h4>
 
 <b>JobService</b> : JobService class is used for implementing the onStartJob() and onStopJob(). This has to be registered with your manifest file.
 
@@ -70,13 +70,13 @@ Added in <b>API Level 21</b>, this is used to schedule jobs in the application's
 
 NOTE : JobScheduler is compatible only with API Level 21 and above. For backport, GCM Network Manager is used.
 
-## [GCM (Google Cloud Messaging) Network Manager](https://developers.google.com/android/reference/com/google/android/gms/gcm/GcmNetworkManager)
+## GCM (Google Cloud Messaging) Network Manager
 
-GCM Network Manager is used as a backport for JobScheduler for below API level 21. It internally uses JobScheduler for API 21 and above. 
+[GCM Network Manager](https://developers.google.com/android/reference/com/google/android/gms/gcm/GcmNetworkManager) is used as a backport for JobScheduler for below API level 21. It internally uses JobScheduler for API 21 and above. 
 
 This uses the Google Play Services to help schedule and batch jobs across the system. Tasks Builder(replacement of JobInfo) are used to define an one-time or a periodic task, and the system takes care of optimizing the battery usage by automatically batching the tasks.
 
-####How to use GCM Network Manager?
+<h4>How to use GCM Network Manager?</h4>
 
 <b>GcmTaskService</b> : This is used to receive the notification from the scheduler that a task is ready to be executed. We will implement this service and subclass the onRunTask() method to do our job. This has to be registered with your manifest file.
 
